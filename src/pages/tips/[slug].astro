@@ -1,0 +1,45 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TipPreview from '../../components/TipPreview.astro';
+import { sortItemsByDateDesc } from '../../utils/data-utils';
+
+export async function getStaticPaths() {
+    const tips = (await getCollection('tips')).sort(sortItemsByDateDesc);
+    const tipsCount = tips.length;
+    return tips.map((tip, index) => ({
+        params: { slug: tip.slug },
+        props: {
+            tip,
+            prevTip: index + 1 !== tipsCount ? tips[index + 1] : null,
+            nextTip: index !== 0 ? tips[index - 1] : null
+        }
+    }));
+}
+
+type Props = { tip: CollectionEntry<'tips'>; prevTip: CollectionEntry<'tips'>; nextTip: CollectionEntry<'tips'> };
+
+const { tip, prevTip, nextTip } = Astro.props;
+const { title, description, seo } = tip.data;
+const { Content } = await tip.render();
+---
+
+<BaseLayout title={seo?.title ?? title} description={seo?.description ?? description} image={seo?.image} pageType='article' showHeader={false}>
+    <article class='mb-16 sm:mb-24'>
+        <header class='mb-8'>
+            <h1 class='text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight'>{title}</h1>
+        </header>
+        <div class='max-w-none prose prose-dante sm:prose-lg'>
+            <Content />
+        </div>
+    </article>
+    {
+        (prevTip || nextTip) && (
+            <div class='my-16 sm:my-24'>
+                <h2 class='mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl'>View Next</h2>
+                {nextTip && <TipPreview tip={nextTip} class='mb-10 sm:mb-12' headingLevel='h3' />}
+                {prevTip && <TipPreview tip={prevTip} class='mb-10 sm:mb-12' headingLevel='h3' />}
+            </div>
+        )
+    }
+</BaseLayout>

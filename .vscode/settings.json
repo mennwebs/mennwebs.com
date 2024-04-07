@@ -1,6 +1,9 @@
 {
-    "editor.tabSize": 4,
+    "editor.tabSize": 2,
     "editor.formatOnSave": true,
+    "liveSassCompile.settings.excludeList": ["/**"],
+    "editor.wordWrapColumn": 120,
+    "prettier.printWidth": 120,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
@@ -22,6 +25,6 @@
     },
     "typescript.tsdk": "node_modules/typescript/lib",
     "files.associations": {
-        "*.css": "tailwindcss",
+        "*.css": "tailwindcss"
     }
 }

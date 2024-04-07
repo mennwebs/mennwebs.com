@@ -1,29 +1,39 @@
 ---
-import { marked } from 'marked';
-import Button from './Button.astro';
 import siteConfig from '../data/site-config';
-
+import { Image } from 'astro:assets';
+import m1 from '../content/img/menn-1.jpg';
+import m2 from '../content/img/menn-2.jpg';
+import m3 from '../content/img/menn-3.jpg';
+import m4 from '../content/img/menn-4.jpg';
+import m5 from '../content/img/menn-5.jpg';
 const hero = siteConfig.hero;
 ---
 
 {
     (hero?.title || hero?.image?.src || hero?.text || (hero?.actions && hero.actions.length > 0)) && (
-        <section class="w-full flex flex-col gap-8 mb-16 sm:mb-24">
-            {hero.title && <h1 class="text-3xl leading-tight font-serif font-medium sm:text-5xl sm:leading-tight">{hero.title}</h1>}
-            {hero.image?.src && (
-                <figure>
-                    <img class="w-full" src={hero.image.src} loading="lazy" decoding="async" alt={hero.image.alt || ''} />
-                    {hero.image.caption && <figcaption class="mt-1.5 text-xs sm:text-sm">{hero.image.caption}</figcaption>}
-                </figure>
-            )}
-            {hero.text && <div class="max-w-none prose prose-dante sm:prose-lg" set:html={marked.parse(hero.text)} />}
-            {hero.actions && hero.actions.length > 0 && (
-                <div class="flex flex-wrap gap-4">
-                    {hero.actions.map((action) => (
-                        <Button href={action.href}>{action.text}</Button>
-                    ))}
-                </div>
-            )}
+        <section class='w-full flex flex-col gap-2 mb-16 sm:mb-24'>
+            <h1 class='text-3xl font-serif sm:mb-3 font-medium sm:text-5xl '>{hero.title}</h1>
+            <h2 class='text-xl sm:text-[2rem] font-serif'>living in the mountains of Pai, Thailand.</h2>
         </section>
     )
 }
+
+<div class='mb-16 sm:mb-20 mx-[calc(50%-50vw)]'>
+    <div class='-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'>
+        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-2'>
+            <Image src={m1} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        </div>
+        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl -rotate-2'>
+            <Image src={m2} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        </div>
+        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-1'>
+            <Image src={m3} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        </div>
+        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl -rotate-1'>
+            <Image src={m4} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        </div>
+        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-2'>
+            <Image src={m5} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        </div>
+    </div>
+</div>
