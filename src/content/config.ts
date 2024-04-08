@@ -31,14 +31,4 @@ const pages = defineCollection({
     })
 });
 
-const tips = defineCollection({
-    schema: z.object({
-        title: z.string(),
-        description: z.string().optional(),
-        publishDate: z.coerce.date(),
-        isFeatured: z.boolean().default(false),
-        seo: seoSchema.optional()
-    })
-});
-
-export const collections = { stories, pages, tips };
+export const collections = { stories, pages };

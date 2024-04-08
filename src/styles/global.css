@@ -16,3 +16,7 @@
         --color-border-main: 242 241 236;
     }
 }
+
+.prose img {
+    @apply rounded-lg shadow-lg;
+}

@@ -34,12 +34,11 @@ export type SiteConfig = {
     hero?: Hero;
     subscribe?: Subscribe;
     postsPerPage?: number;
-    tipsPerPage?: number;
 };
 
 const siteConfig: SiteConfig = {
     title: 'Menn',
-    subtitle: 'Stories, tips, and thoughts.',
+    subtitle: 'Stories and thoughts.',
     description: 'Menn - Chakkrisn Talawat, Web designer and developer from Pai, Thailand.',
     image: {
         src: '/dante-preview.jpg',
@@ -50,11 +49,6 @@ const siteConfig: SiteConfig = {
             text: 'Stories',
             href: '/stories'
         },
-        {
-            text: 'Tips',
-            href: '/tips'
-        },
-
         {
             text: 'About',
             href: '/about'
@@ -107,8 +101,7 @@ const siteConfig: SiteConfig = {
         text: 'One update per week. All the latest posts directly in your inbox.',
         formUrl: '#'
     },
-    postsPerPage: 8,
-    tipsPerPage: 8
+    postsPerPage: 8
 };
 
 export default siteConfig;
