@@ -5,7 +5,7 @@ import ArrowRight from '../icons/ArrowRight.astro';
 type Props = { tip: CollectionEntry<'tips'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { tip, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, description } = tip.data;
+const { title, description, seo } = tip.data;
 const TitleTag = headingLevel;
 ---
 

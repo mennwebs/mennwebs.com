@@ -54,10 +54,7 @@ const siteConfig: SiteConfig = {
             text: 'Tips',
             href: '/tips'
         },
-        {
-            text: 'Tags',
-            href: '/tags'
-        },
+
         {
             text: 'About',
             href: '/about'
