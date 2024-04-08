@@ -1,11 +1,11 @@
 ---
 import siteConfig from '../data/site-config';
 import { Image } from 'astro:assets';
-import m1 from '../content/img/menn-1.jpg';
-import m2 from '../content/img/menn-2.jpg';
-import m3 from '../content/img/menn-3.jpg';
-import m4 from '../content/img/menn-4.jpg';
-import m5 from '../content/img/menn-5.jpg';
+import m1 from '../content/img/menn-running.jpg';
+import m2 from '../content/img/menn-biking.jpg';
+import m3 from '../content/img/menn-hiking.jpg';
+import m4 from '../content/img/menn-pai.jpg';
+import m5 from '../content/img/menn-working.jpg';
 const hero = siteConfig.hero;
 ---
 
@@ -18,21 +18,23 @@ const hero = siteConfig.hero;
     )
 }
 
-<div class='mb-16 sm:mb-20 mx-[calc(50%-50vw)]'>
-    <div class='-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8'>
-        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-2'>
-            <Image src={m1} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+<div class='mb-16 sm:mb-20 mx-[calc(50%-50vw)] overflow-x-auto lg:overflow-hidden'>
+    <div
+        class='-my-4 flex justify-center gap-5 py-4 md:gap-6 lg:gap-8 *:relative *:aspect-[9/10] *:w-32 *:flex-none *:overflow-hidden *:rounded-xl *:sm:w-48 *:sm:rounded-2xl *:md:w-64 *:lg:w-72'
+    >
+        <div class='rotate-2'>
+            <Image src={m1} alt='Menn Running' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
         </div>
-        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl -rotate-2'>
-            <Image src={m2} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        <div class='-rotate-2'>
+            <Image src={m2} alt='Menn Biking' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
         </div>
-        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-1'>
-            <Image src={m3} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        <div class='rotate-1'>
+            <Image src={m3} alt='Menn Working' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
         </div>
-        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl -rotate-1'>
-            <Image src={m4} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
+        <div class='-rotate-1'>
+            <Image src={m4} alt='Menn Hiking' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
         </div>
-        <div class='relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl rotate-2'>
+        <div class='rotate-1'>
             <Image src={m5} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' width={576} height={640} />
         </div>
     </div>
