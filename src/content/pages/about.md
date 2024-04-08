@@ -10,7 +10,7 @@ seo:
 
 ![Menn at Seed Webs](/img/about-menn.jpg)
 
-<div class="font-serif text-2xl leading-normal">I'm Chakkrisn <em>Menn</em> Talawat, a web designer and developer who transitioned from Bangkok to Pai, leading the team at <a href="https://seedwebs.com/" target="_blank">Seed Webs.</a></div>
+<div class="font-serif text-xl sm:text-2xl leading-normal">I'm Chakkrisn <em>Menn</em> Talawat, a web designer and developer who transitioned from Bangkok to Pai, leading the team at <a href="https://seedwebs.com/" target="_blank">Seed Webs.</a></div>
 
 ## 2003
 
@@ -30,4 +30,8 @@ I found love in Pai with a local nurse and build our home toghether.
 
 ## 2020
 
-I rebranded my company as **Seed Webs**, expanding into various web technologies like Next.js, React, MongoDB, Vue.js, and Astro, while maintaining our commitment to innovation and lean management.
+I rebranded my company as **Seed Webs**, expanding into various web technologies like Next.js, React, MongoDB, Vue.js, and Astro, while staying innovative and lean.
+
+## 2024
+
+Craft this website using Astro and share my story with the world.
