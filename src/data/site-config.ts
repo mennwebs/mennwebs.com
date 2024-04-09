@@ -41,13 +41,17 @@ const siteConfig: SiteConfig = {
     subtitle: 'Stories and thoughts.',
     description: 'Menn - Chakkrisn Talawat, Web designer and developer from Pai, Thailand.',
     image: {
-        src: '/dante-preview.jpg',
-        alt: 'Dante - Astro.js and Tailwind CSS theme'
+        src: '/img/menn.jpg',
+        alt: 'Menn Webs - Chakkrisn Talawat, Web designer and developer from Pai, Thailand.'
     },
     headerNavLinks: [
         {
             text: 'Stories',
             href: '/stories'
+        },
+        {
+            text: 'Tags',
+            href: '/tags'
         },
         {
             text: 'About',
@@ -97,8 +101,8 @@ const siteConfig: SiteConfig = {
         ]
     },
     subscribe: {
-        title: 'Subscribe to Dante Newsletter',
-        text: 'One update per week. All the latest posts directly in your inbox.',
+        title: 'Subscribe to Newsletter',
+        text: 'Latest posts directly in your inbox.',
         formUrl: '#'
     },
     postsPerPage: 8
