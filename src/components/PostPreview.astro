@@ -12,40 +12,40 @@ const TitleTag = headingLevel;
 ---
 
 <a class:list={['flex justify-between items-center gap-4 sm:gap-6  group', className]} href={`/stories/${post.slug}/`}>
-    {
-        seo?.image && (
-            <div class='rounded-lg shadow overflow-hidden shrink-0 dark:border-black'>
-                <Image
-                    class='block object-cover w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40'
-                    width='320'
-                    height='320'
-                    src={seo.image?.src}
-                    alt={seo.image.alt ?? title}
-                />
-            </div>
+  {
+    seo?.image && (
+      <div class='rounded-lg shadow overflow-hidden shrink-0 dark:border-black'>
+        <Image
+          class='block object-cover w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40'
+          width='320'
+          height='320'
+          src={seo.image?.src}
+          alt={seo.image.alt ?? title}
+        />
+      </div>
+    )
+  }
+  <div class='grow'>
+    <TitleTag
+      class='text-xl leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl'
+    >
+      {title}
+    </TitleTag>
+    <div class='mt-3 text-sm leading-normal hidden sm:block'>
+      <FormattedDate date={publishDate} />
+      {
+        updatedDate && (
+          <>
+            {' '}
+            <span>
+              (Updated on <FormattedDate date={updatedDate} />)
+            </span>
+          </>
         )
-    }
-    <div class='grow'>
-        <TitleTag
-            class='text-xl leading-tight font-serif font-medium group-hover:underline group-hover:decoration-dashed group-hover:underline-offset-4 group-hover:decoration-1 sm:text-2xl'
-        >
-            {title}
-        </TitleTag>
-        <div class='mt-3 text-sm leading-normal hidden sm:block'>
-            <FormattedDate date={publishDate} />
-            {
-                updatedDate && (
-                    <>
-                        {' '}
-                        <span>
-                            (Updated on <FormattedDate date={updatedDate} />)
-                        </span>
-                    </>
-                )
-            }
-        </div>
+      }
     </div>
-    <div class='hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0'>
-        Read Post <ArrowRight class='fill-current w-4 h-4' />
-    </div>
+  </div>
+  <div class='hidden font-serif italic opacity-0 transition group-hover:opacity-100 sm:inline-flex sm:gap-1 sm:items-center sm:shrink-0'>
+    Read Post <ArrowRight class='fill-current w-4 h-4' />
+  </div>
 </a>

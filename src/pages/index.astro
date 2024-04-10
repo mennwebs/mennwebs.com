@@ -11,19 +11,19 @@ const posts = (await getCollection('stories')).sort(sortItemsByDateDesc);
 ---
 
 <BaseLayout description={siteConfig.description} image={siteConfig.image}>
-    <Hero />
+  <Hero />
 
-    {
-        posts?.length > 0 && (
-            <div class='mb-16 sm:mb-24'>
-                <h2 class='mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl'>Stories</h2>
-                {posts.slice(0, 3).map((post) => (
-                    <PostPreview post={post} class='mb-10 sm:mb-12' headingLevel='h3' />
-                ))}
-                <div class='mt-12 sm:mt-16'>
-                    <Button href='/stories'>View All Stories</Button>
-                </div>
-            </div>
-        )
-    }
+  {
+    posts?.length > 0 && (
+      <div class='mb-16 sm:mb-24'>
+        <h2 class='mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl'>Stories</h2>
+        {posts.slice(0, 3).map((post) => (
+          <PostPreview post={post} class='mb-10 sm:mb-12' headingLevel='h3' />
+        ))}
+        <div class='mt-12 sm:mt-16'>
+          <Button href='/stories'>View All Stories</Button>
+        </div>
+      </div>
+    )
+  }
 </BaseLayout>
