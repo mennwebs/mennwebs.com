@@ -7,21 +7,15 @@ import { Image } from 'astro:assets';
 type Props = { post: CollectionEntry<'stories'>; class?: string; headingLevel?: 'h2' | 'h3' };
 
 const { post, class: className, headingLevel = 'h2' } = Astro.props;
-const { title, publishDate, updatedDate, excerpt, seo } = post.data;
+const { title, publishDate, updatedDate, cover } = post.data;
 const TitleTag = headingLevel;
 ---
 
 <a class:list={['flex justify-between items-center gap-4 sm:gap-6  group', className]} href={`/stories/${post.slug}/`}>
   {
-    seo?.image && (
+    cover && (
       <div class='rounded-lg shadow overflow-hidden shrink-0 dark:border-black'>
-        <Image
-          class='block object-cover w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40'
-          width='320'
-          height='320'
-          src={seo.image?.src}
-          alt={seo.image.alt ?? title}
-        />
+        <Image class='block object-cover w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40' width='320' height='320' src={cover} alt={title} />
       </div>
     )
   }

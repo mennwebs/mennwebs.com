@@ -1,14 +1,9 @@
 ---
 title: About Menn
-seo:
-  title: About Menn
-  description: Learn more about the person behind the website and embark on a journey of inspiration and shared experiences.
-  image:
-    src: '/about.jpeg'
-    alt: A person sitting at a desk in front of a computer
+cover: ../img/about-menn.jpg
 ---
 
-![Menn at Seed Webs](/img/about-menn.jpg)
+![Menn at Seed Webs](../img/about-menn.jpg)
 
 <div class="font-serif text-xl sm:text-2xl leading-normal">I'm Chakkrisn <em>Menn</em> Talawat, a web designer and developer who transitioned from Bangkok to Pai, leading the team at <a href="https://seedwebs.com/" target="_blank">Seed Webs.</a></div>
 
@@ -30,7 +25,7 @@ I found love in Pai with a local nurse and build our home toghether.
 
 ## 2020
 
-I rebranded my company as **Seed Webs**, expanding into various web technologies like Next.js, React, MongoDB, Vue.js, and Astro, while staying innovative and lean.
+I rebranded my company as **Seed Webs**, expanding into various JavaScript technologies like React, MongoDB, Next.js, Directus and Astro, while staying innovative and lean.
 
 ## 2024
 

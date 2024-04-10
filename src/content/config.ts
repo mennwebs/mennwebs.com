@@ -13,22 +13,30 @@ const seoSchema = z.object({
 });
 
 const stories = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    excerpt: z.string().optional(),
-    publishDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    isFeatured: z.boolean().default(false),
-    tags: z.array(z.string()).default([]),
-    seo: seoSchema.optional()
-  })
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      excerpt: z.string().optional(),
+      publishDate: z.coerce.date(),
+      updatedDate: z.coerce.date().optional(),
+      isFeatured: z.boolean().default(false),
+      tags: z.array(z.string()).default([]),
+      cover: image().refine((img) => img.width >= 1080, {
+        message: 'Cover image must be at least 1080 pixels wide!'
+      }),
+      seo: seoSchema.optional()
+    })
 });
 
 const pages = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    seo: seoSchema.optional()
-  })
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      cover: image().refine((img) => img.width >= 1080, {
+        message: 'Cover image must be at least 1080 pixels wide!'
+      }),
+      seo: seoSchema.optional()
+    })
 });
 
 export const collections = { stories, pages };
