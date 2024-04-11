@@ -23,19 +23,35 @@ const hero = siteConfig.hero;
     class='-my-4 flex justify-center gap-4 py-4 overflow-hidden md:gap-6 lg:gap-8 *:relative *:aspect-[9/10] *:w-36 *:flex-none *:overflow-hidden *:rounded-xl *:shadow *:sm:w-44 *:sm:rounded-2xl *:md:w-72 *:lg:w-64 *:xl:w-80'
   >
     <div class='rotate-2 hidden sm:block'>
-      <Image src={m1} alt='Menn Running' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} />
+      <Image src={m1} alt='Menn Running' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} quality={70} />
     </div>
     <div class='-rotate-2'>
-      <Image src={m2} alt='Menn Biking' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} loading='eager' decoding='sync' />
+      <Image src={m2} alt='Menn Biking' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} quality={70} loading='eager' decoding='sync' />
     </div>
     <div class='rotate-1'>
-      <Image src={m3} alt='Road to Pai, Thailand' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} loading='eager' decoding='sync' />
+      <Image
+        src={m3}
+        alt='Road to Pai, Thailand'
+        class='absolute inset-0 h-full w-full object-cover'
+        widths={[352, 640]}
+        quality={70}
+        loading='eager'
+        decoding='sync'
+      />
     </div>
     <div class='-rotate-1'>
-      <Image src={m4} alt='Menn at Seed Webs office' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} loading='eager' decoding='sync' />
+      <Image
+        src={m4}
+        alt='Menn at Seed Webs office'
+        class='absolute inset-0 h-full w-full object-cover'
+        widths={[352, 640]}
+        quality={70}
+        loading='eager'
+        decoding='sync'
+      />
     </div>
     <div class='rotate-1 hidden sm:block'>
-      <Image src={m5} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} />
+      <Image src={m5} alt='Menn on the mountains' class='absolute inset-0 h-full w-full object-cover' widths={[352, 640]} quality={70} />
     </div>
   </div>
 </div>
