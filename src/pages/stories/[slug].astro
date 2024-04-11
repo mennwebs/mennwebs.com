@@ -90,16 +90,15 @@ const { Content } = await post.render();
     async function copyUrl(button: HTMLButtonElement) {
       let url = button.getAttribute('data-url') || '';
       let label = button.innerText;
-
       await navigator.clipboard.writeText(url);
-
       button.innerText = 'Link Copied';
-
       setTimeout(() => {
         button.innerText = label;
       }, 2500);
     }
+
+    for (var e = document.body.getElementsByTagName('a'), t = e.length, n = 0; n < t; n++) {
+      new URL(e[n].href).origin !== location.origin && e[n].setAttribute('target', '_blank');
+    }
   });
-  for (var e = document.body.getElementsByTagName('a'), t = e.length, n = 0; n < t; n++)
-    new URL(e[n].href).origin !== location.origin && e[n].setAttribute('target', '_blank');
 </script>
