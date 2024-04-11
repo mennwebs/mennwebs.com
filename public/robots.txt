@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mennwebs.pages.dev/sitemap-index.xml
+Sitemap: https://mennwebs.com/sitemap-index.xml

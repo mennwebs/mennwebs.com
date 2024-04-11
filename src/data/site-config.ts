@@ -74,16 +74,16 @@ const siteConfig: SiteConfig = {
   ],
   socialLinks: [
     {
-      text: 'Dribbble',
-      href: 'https://dribbble.com/'
+      text: 'Facebook',
+      href: 'https://www.facebook.com/MennWebs/'
     },
     {
-      text: 'Instagram',
-      href: 'https://instagram.com/'
+      text: 'X',
+      href: 'https://twitter.com/mennwebs'
     },
     {
-      text: 'X/Twitter',
-      href: 'https://twitter.com/'
+      text: 'Youtube',
+      href: 'https://www.youtube.com/@mennwebs'
     }
   ],
   hero: {

@@ -7,7 +7,7 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://mennwebs.pages.dev/',
+  site: 'https://mennwebs.com/',
   integrations: [
     mdx(),
     sitemap(),
