@@ -1,5 +1,6 @@
 ---
 import siteConfig from '../data/site-config';
+import { Icon } from 'astro-icon/components';
 
 const socialLinks = siteConfig.socialLinks || [];
 const navLinks = siteConfig.footerNavLinks || [];
@@ -14,15 +15,10 @@ const navLinks = siteConfig.footerNavLinks || [];
   >
     {
       socialLinks.length > 0 && (
-        <div class='flex flex-wrap gap-x-4 gap-y-1'>
+        <div class='flex flex-wrap gap-x-4 gap-y-1 text-base'>
           {socialLinks.map((link) => (
-            <a
-              class='inline-flex items-center justify-center text-sm hover:underline hover:underline-offset-2'
-              href={link.href}
-              target='_blank'
-              rel='noopener noreferer'
-            >
-              {link.text}
+            <a class='inline-flex items-center justify-center' href={link.href} target='_blank' rel='noopener noreferer' aria-label={link.text}>
+              <Icon name={link.text} />
             </a>
           ))}
         </div>
