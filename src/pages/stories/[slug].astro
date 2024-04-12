@@ -8,6 +8,7 @@ import Subscribe from '../../components/Subscribe.astro';
 import { sortItemsByDateDesc } from '../../utils/data-utils';
 import { slugify } from '../../utils/common-utils';
 import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('stories')).sort(sortItemsByDateDesc);
@@ -54,20 +55,22 @@ const { Content } = await post.render();
       <Content />
     </div>
 
+    {
+      facebookPost && (
+        <div>
+          <a
+            class='inline-flex mt-8 gap-1.5 sm:mt-12  items-center justify-center font-serif text-sm  italic  text-main whitespace-nowrap transition  hover:underline hover:underline-offset-4 hover:decoration-solid decoration-1'
+            href={facebookPost}
+            target='_blank'
+          >
+            <Icon name='message' class='w-4 h-4' />
+            Facebook Post
+          </a>
+        </div>
+      )
+    }
+
     <div class='mt-8 flex items-center gap-6 text-sm sm:mt-12 sm:text-base'>
-      {
-        facebookPost && (
-          <div>
-            <a
-              class='inline-flex items-center justify-center px-4 py-2 font-serif text-sm leading-tight italic  text-main rounded-full whitespace-nowrap transition bg-muted hover:bg-white dark:hover:bg-black'
-              href={facebookPost}
-              target='_blank'
-            >
-              Facebook Post
-            </a>
-          </div>
-        )
-      }
       {
         tags.length > 0 && (
           <div class='flex flex-wrap gap-x-5 gap-y-1 text-sm font-serif'>
@@ -86,7 +89,7 @@ const { Content } = await post.render();
   </article>
   {
     (prevPost || nextPost) && (
-      <div class='my-16 sm:my-24'>
+      <div class='my-16 sm:my-20'>
         <h2 class='mb-12 text-xl font-serif italic sm:mb-16 sm:text-2xl'>Read Next</h2>
         {nextPost && <PostPreview post={nextPost} class='mb-10 sm:mb-12' headingLevel='h3' />}
         {prevPost && <PostPreview post={prevPost} class='mb-10 sm:mb-12' headingLevel='h3' />}

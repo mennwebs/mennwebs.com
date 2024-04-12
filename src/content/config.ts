@@ -19,7 +19,7 @@ const stories = defineCollection({
       excerpt: z.string().optional(),
       publishDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
-      isFeatured: z.boolean().default(false),
+      // isFeatured: z.boolean().default(false),
       tags: z.array(z.string()).default([]),
       cover: image().refine((img) => img.width >= 1080, {
         message: 'Cover image must be at least 1080 pixels wide!'
