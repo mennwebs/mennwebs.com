@@ -1,7 +1,8 @@
 ---
 import siteConfig from '../data/site-config';
 import { Image } from 'astro:assets';
-import m0 from '../content/img/home/hero.png';
+import mobile from '../content/img/home/hero.jpg';
+import mobile_dark from '../content/img/home/hero_dark.jpg';
 import m1 from '../content/img/home/menn-running.jpg';
 import m2 from '../content/img/home/menn-biking.jpg';
 import m3 from '../content/img/home/menn-hiking.jpg';
@@ -24,8 +25,12 @@ const hero = siteConfig.hero;
   )
 }
 
-<div class='mb-12 -mx-4 md:hidden'>
-  <Image src={m0} alt='Menn in Pai, Thailand' class='w-full' widths={[390, 780]} quality={60} loading='eager' decoding='sync' />
+<div class='mb-12 -mx-4 md:hidden dark:hidden' aria-hidden='true'>
+  <Image src={mobile} alt='Menn in Pai, Thailand' class='w-full' widths={[390, 780]} quality={60} loading='eager' decoding='sync' />
+</div>
+
+<div class='hidden dark:block mb-12 -mx-4 dark:md:hidden' aria-hidden='true'>
+  <Image src={mobile_dark} alt='Menn in Pai, Thailand' class='w-full' widths={[390, 780]} quality={60} loading='eager' decoding='sync' />
 </div>
 
 <div class='hidden md:block md:mb-20 mx-[calc(50%-50vw)]'>

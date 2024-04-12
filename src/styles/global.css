@@ -54,8 +54,8 @@
   }
   html.dark {
     --color-text-main: 249 249 252;
-    --color-bg-main: 23 23 23;
-    --color-bg-muted: 36 36 36;
+    --color-bg-main: 34 34 34;
+    --color-bg-muted: 51 51 51;
     --color-border-main: 242 241 236;
   }
 }
