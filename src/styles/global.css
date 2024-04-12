@@ -40,27 +40,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Noto Serif Thai';
-  src: url('/fonts/notoserifthai-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Noto Serif Thai';
-  src: url('/fonts/notoserifthai-medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Noto Serif Thai';
-  src: url('/fonts/notoserifthai-bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 @tailwind base;
 @tailwind components;

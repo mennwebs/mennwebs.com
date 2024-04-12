@@ -5,7 +5,7 @@ cover: ../img/about-menn.jpg
 
 ![Menn at Seed Webs](../img/about-menn.jpg)
 
-<div class="font-serif text-xl sm:text-2xl leading-normal">I'm Chakkrisn <em>Menn</em> Talawat, a web designer and developer who transitioned from Bangkok to Pai, leading the team at <a href="https://seedwebs.com/" target="_blank">Seed Webs.</a></div>
+<div class="font-serif text-xl sm:text-2xl leading-relaxed sm:leading-relaxed">I'm Chakkrisn <em>Menn</em> Talawat, a web designer and developer who transitioned from Bangkok to Pai, leading the team at <a href="https://seedwebs.com/" target="_blank">Seed Webs.</a></div>
 
 ## 2003
 
