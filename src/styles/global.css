@@ -63,3 +63,6 @@
 .prose img {
   @apply rounded-lg shadow-lg;
 }
+.prose :where(h1, h2, h3, h4, h5, h6):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  @apply font-serif;
+}
